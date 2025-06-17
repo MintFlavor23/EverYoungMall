@@ -30,3 +30,29 @@ Thumbs.db
 
 # Environment files
 .env
+
+**/.gitignore
+
+
+**/mvnw
+**/mvnw.cmd
+**/.mvn
+**/pom.xml.tag
+**/pom.xml.releaseBackup
+**/pom.xml.versionsBackup
+**/pom.xml.next
+**/release.properties
+**/dependency-reduced-pom.xml
+**/buildNumber.properties
+**/target/
+**/surefire-reports/
+**/failsafe-reports/
+**/generated-sources/
+**/generated-test-sources/
+**/junit-platform/
+
+**/idea/
+**/*.iml
+
+
+
