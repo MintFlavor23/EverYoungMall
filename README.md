@@ -1,5 +1,6 @@
-# EverYoungMall
-# YoungMall - Modern E-commerce Platform
+# EverEverYoungMall
+
+# EverYoungMall - Modern E-commerce Platform
 
 <p align="center">
   <img src="https://img.shields.io/badge/Spring%20Boot-3.1.5-brightgreen.svg" alt="Spring Boot">
@@ -10,7 +11,7 @@
 </p>
 
 📖 Introduction
-YoungMall is a comprehensive e-commerce platform designed to showcase modern full-stack development practices. Built with a microservices architecture, it demonstrates how to create a scalable online shopping system that can seamlessly transition from local development to cloud deployment.
+EverYoungMall is a comprehensive e-commerce platform designed to showcase modern full-stack development practices. Built with a microservices architecture, it demonstrates how to create a scalable online shopping system that can seamlessly transition from local development to cloud deployment.
 Key Features
 
 Product Management: Browse products by categories, search, and filter options
@@ -22,7 +23,7 @@ Admin Dashboard: Manage products, orders, and users
 Real-time Inventory: Track stock levels with automatic updates
 Promotional System: Coupons and flash sales functionality
 
-Why YoungMall?
+Why EverYoungMall?
 This project serves as both a learning resource and a production-ready template for building modern e-commerce applications. It showcases:
 
 Clean Architecture: Separation of concerns with microservices
@@ -31,11 +32,29 @@ Modern Tech Stack: Latest versions of Spring Boot, React, and TypeScript
 DevOps Ready: Dockerized services with CI/CD pipeline support
 Scalable Infrastructure: Designed to handle growth from startup to enterprise
 
-Whether you're learning microservices, preparing for interviews, or starting your own e-commerce platform, YoungMall provides a solid foundation with best practices baked in.
+Whether you're learning microservices, preparing for interviews, or starting your own e-commerce platform, EverYoungMall provides a solid foundation with best practices baked in.
+
+## Project Strucutre
+
+# 📦 Project Structure: EverYoungMall
+
+```bash
+EVERYOUNGMALL/
+├── .idea/                 # IDE configuration files
+├── .vscode/               # VS Code workspace settings
+├── mall-admin/            # Admin service - handles back-office operations
+├── mall-commons/          # Common utilities and shared modules
+├── mall-coupon/           # Coupon service - manages discount and promotions
+├── mall-member/           # Member service - handles user registration, auth, profile
+├── mall-order/            # Order service - manages customer orders and payments
+├── mall-product/          # Product service - manages product listing, details, etc.
+├── mall-ware/             # Warehouse service - handles inventory and stock
+```
 
 ## 🚀 Tech Stack
 
 ### Backend
+
 - **Framework**: Spring Boot 3.x, Spring Cloud
 - **Database**: MySQL 8.0 (JPA/Hibernate)
 - **Cache**: Redis
@@ -45,6 +64,7 @@ Whether you're learning microservices, preparing for interviews, or starting you
 - **Cloud Services**: AWS (S3, RDS, ElastiCache, Cognito, etc.)
 
 ### Frontend
+
 - **Framework**: React 18 + TypeScript
 - **UI Library**: Material-UI (MUI)
 - **State Management**: Redux Toolkit
@@ -63,26 +83,30 @@ Whether you're learning microservices, preparing for interviews, or starting you
 ## 🛠️ Quick Start
 
 ### 1. Clone the Repository
+
 ```bash
-git clone https://github.com/yourusername/youngmall.git
-cd youngmall
+git clone https://github.com/yourusername/EverYoungMall.git
+cd EverYoungMall
 ```
 
 ### 2. Setup Project Structure
+
 ```bash
-chmod +x setup-youngmall.sh
-./setup-youngmall.sh
+chmod +x setup-EverYoungMall.sh
+./setup-EverYoungMall.sh
 ```
 
 ### 3. Configure Environment
 
 #### For Local Development
+
 ```bash
 cp .env.local.template .env.local
 # Edit .env.local with your local configurations
 ```
 
 #### For AWS Production
+
 ```bash
 cp .env.aws.template .env.aws
 # Edit .env.aws with your AWS credentials and endpoints
@@ -111,6 +135,7 @@ The project uses centralized environment configuration. All services read from t
 - `.env.aws` - AWS production settings
 
 Key variables include:
+
 - `DATABASE_URL` - MySQL connection string
 - `REDIS_HOST` - Redis server address
 - `STORAGE_TYPE` - Storage service (local/s3)
@@ -150,20 +175,20 @@ Key variables include:
 ## 🏗️ Project Structure
 
 ```
-youngmall/
+EverYoungMall/
 ├── backend/                 # Spring Boot microservices
-│   ├── youngmall-common/   # Shared utilities and configs
-│   ├── youngmall-gateway/  # API Gateway
-│   ├── youngmall-product/  # Product service
-│   ├── youngmall-order/    # Order service
-│   ├── youngmall-member/   # User service
-│   ├── youngmall-ware/     # Inventory service
-│   ├── youngmall-search/   # Search service
-│   ├── youngmall-coupon/   # Promotion service
-│   ├── youngmall-cart/     # Shopping cart service
-│   └── youngmall-seckill/  # Flash sale service
+│   ├── EverYoungMall-common/   # Shared utilities and configs
+│   ├── EverYoungMall-gateway/  # API Gateway
+│   ├── EverYoungMall-product/  # Product service
+│   ├── EverYoungMall-order/    # Order service
+│   ├── EverYoungMall-member/   # User service
+│   ├── EverYoungMall-ware/     # Inventory service
+│   ├── EverYoungMall-search/   # Search service
+│   ├── EverYoungMall-coupon/   # Promotion service
+│   ├── EverYoungMall-cart/     # Shopping cart service
+│   └── EverYoungMall-seckill/  # Flash sale service
 ├── frontend/               # React applications
-│   └── youngmall-web/     # Web application
+│   └── EverYoungMall-web/     # Web application
 ├── mobile/                 # React Native app
 ├── docker/                 # Docker configurations
 ├── k8s/                   # Kubernetes manifests
@@ -176,19 +201,21 @@ youngmall/
 ### Local Development
 
 1. **Start Infrastructure Services**
+
    ```bash
    docker-compose up -d
    ```
 
 2. **Start Backend Services**
+
    ```bash
-   cd backend/youngmall-product
+   cd backend/EverYoungMall-product
    mvn spring-boot:run -Dspring.profiles.active=local
    ```
 
 3. **Start Frontend Development Server**
    ```bash
-   cd frontend/youngmall-web
+   cd frontend/EverYoungMall-web
    npm install
    npm run dev
    ```
@@ -204,13 +231,14 @@ cd backend
 mvn clean package -DskipTests
 
 # Build frontend only
-cd frontend/youngmall-web
+cd frontend/EverYoungMall-web
 npm run build
 ```
 
 ## 🌐 Service URLs
 
 ### Local Environment
+
 - Frontend: http://localhost:3000
 - Backend API: http://localhost:8080
 - Swagger UI: http://localhost:8080/swagger-ui.html
@@ -221,8 +249,9 @@ npm run build
 - Consul UI: http://localhost:8500
 
 ### AWS Environment
-- Frontend: https://www.youngmall.com
-- Backend API: https://api.youngmall.com
+
+- Frontend: https://www.EverYoungMall.com
+- Backend API: https://api.EverYoungMall.com
 - Services are managed through AWS Console
 
 ## 📦 Docker Services
@@ -248,16 +277,18 @@ docker-compose down -v
 ### Database Configuration
 
 Local MySQL:
+
 ```properties
-DATABASE_URL=jdbc:mysql://localhost:3306/youngmall
+DATABASE_URL=jdbc:mysql://localhost:3306/EverYoungMall
 DATABASE_USERNAME=root
 DATABASE_PASSWORD=password
 ```
 
 AWS RDS MySQL:
+
 ```properties
-DATABASE_URL=jdbc:mysql://your-rds-endpoint:3306/youngmall
-DATABASE_USERNAME=youngmall_admin
+DATABASE_URL=jdbc:mysql://your-rds-endpoint:3306/EverYoungMall
+DATABASE_USERNAME=EverYoungMall_admin
 DATABASE_PASSWORD=your-secure-password
 ```
 
@@ -265,7 +296,7 @@ DATABASE_PASSWORD=your-secure-password
 
 The application automatically switches storage implementations based on environment:
 
-- **Local**: Files stored in `/tmp/youngmall/uploads`
+- **Local**: Files stored in `/tmp/EverYoungMall/uploads`
 - **AWS**: Files stored in S3 bucket
 
 ### Authentication
@@ -281,7 +312,7 @@ cd backend
 mvn test
 
 # Run frontend tests
-cd frontend/youngmall-web
+cd frontend/EverYoungMall-web
 npm test
 
 # Run E2E tests
@@ -291,10 +322,12 @@ npm run e2e
 ## 📈 Monitoring
 
 ### Local Environment
+
 - Spring Boot Actuator endpoints: http://localhost:8080/actuator
 - Custom health checks available at each service
 
 ### AWS Environment
+
 - CloudWatch for logs and metrics
 - X-Ray for distributed tracing
 - Custom dashboards in CloudWatch
@@ -304,16 +337,19 @@ npm run e2e
 ### AWS Deployment Checklist
 
 1. **Configure AWS Credentials**
+
    ```bash
    aws configure
    ```
 
 2. **Update Environment Variables**
+
    ```bash
    vi .env.aws  # Update with your AWS resources
    ```
 
 3. **Deploy Infrastructure**
+
    ```bash
    cd terraform
    terraform init
@@ -347,8 +383,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-For support, email support@youngmall.com or join our Slack channel.
+For support, email support@EverYoungMall.com or join our Slack channel.
 
 ---
 
-<p align="center">Made with ❤️ by the YoungMall Team</p>
+<p align="center">Made with ❤️ by the EverYoungMall Team</p>

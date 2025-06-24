@@ -5,13 +5,13 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.5.0</version>
+		<version>3.5.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.everyoungmall</groupId>
-	<artifactId>mall-product</artifactId>
+	<artifactId>mall-commons</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>mall-product</name>
+	<name>mall-commons</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>
@@ -29,19 +29,21 @@
 	<properties>
 		<java.version>17</java.version>
 		<spring-cloud.version>2025.0.0</spring-cloud.version>
-		<hibernate-tools.version>6.4.1.Final</hibernate-tools.version>
-		<org.mapstruct.version>1.6.3</org.mapstruct.version>
-		<mysql.version>8.0.33</mysql.version>
 	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-openfeign</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
 	<dependencyManagement>
@@ -61,52 +63,6 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.8.1</version>
-				<configuration>
-					<source>${java.version}</source>
-					<target>${java.version}</target>
-					<annotationProcessorPaths>
-						<path>
-							<groupId>org.mapstruct</groupId>
-							<artifactId>mapstruct-processor</artifactId>
-							<version>${org.mapstruct.version}</version>
-						</path>
-						<!-- other annotation processors -->
-					</annotationProcessorPaths>
-				</configuration>
-			</plugin>
-
-			<plugin>
-				<groupId>org.hibernate.tool</groupId>
-				<artifactId>hibernate-tools-maven</artifactId>
-				<version>${hibernate-tools.version}</version>
-				<executions>
-					<execution>
-						<goals>
-							<goal>hbm2java</goal>
-						</goals>
-					</execution>
-				</executions>
-				<configuration>
-					<!-- 指向 src/main/resources/hibernate.reveng.xml -->
-					<revengFile>src/main/resources/hibernate.reveng.xml</revengFile>
-					<outputDirectory>src/main/java</outputDirectory>
-					<packageName>com.everyoungmall.member.entity</packageName>
-					<ejb3>true</ejb3>
-					<jdk5>true</jdk5>
-				</configuration>
-				<dependencies>
-					<dependency>
-						<groupId>mysql</groupId>
-						<artifactId>mysql-connector-java</artifactId>
-						<version>8.0.33</version>
-					</dependency>
-				</dependencies>
 			</plugin>
 		</plugins>
 	</build>
