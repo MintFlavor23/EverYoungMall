@@ -172,30 +172,6 @@ Key variables include:
 ./run.sh aws
 ```
 
-## 🏗️ Project Structure
-
-```
-EverYoungMall/
-├── backend/                 # Spring Boot microservices
-│   ├── EverYoungMall-common/   # Shared utilities and configs
-│   ├── EverYoungMall-gateway/  # API Gateway
-│   ├── EverYoungMall-product/  # Product service
-│   ├── EverYoungMall-order/    # Order service
-│   ├── EverYoungMall-member/   # User service
-│   ├── EverYoungMall-ware/     # Inventory service
-│   ├── EverYoungMall-search/   # Search service
-│   ├── EverYoungMall-coupon/   # Promotion service
-│   ├── EverYoungMall-cart/     # Shopping cart service
-│   └── EverYoungMall-seckill/  # Flash sale service
-├── frontend/               # React applications
-│   └── EverYoungMall-web/     # Web application
-├── mobile/                 # React Native app
-├── docker/                 # Docker configurations
-├── k8s/                   # Kubernetes manifests
-├── terraform/             # Infrastructure as Code
-└── scripts/               # Utility scripts
-```
-
 ## 💻 Development Workflow
 
 ### Local Development
