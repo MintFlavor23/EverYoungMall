@@ -34,7 +34,6 @@ Scalable Infrastructure: Designed to handle growth from startup to enterprise
 
 Whether you're learning microservices, preparing for interviews, or starting your own e-commerce platform, EverYoungMall provides a solid foundation with best practices baked in.
 
-## Project Strucutre
 
 # 📦 Project Structure: EverYoungMall
 
